@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 // Thẻ fragment chỉ chứa, không sinh ra thẻ thật trong DOM
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import { publicRoutes } from '~/routes';
 import { DefaultLayout } from '~/components/Layout';
 
