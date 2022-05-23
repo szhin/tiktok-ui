@@ -9,8 +9,6 @@ import {
     faMagnifyingGlass,
     faSpinner,
     faKeyboard,
-    faCloudUpload,
-    faMessage,
     faUser,
     faCoins,
     faGear,
@@ -27,6 +25,8 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Menu from '~/components/Popper/Menu';
+import { UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -137,7 +137,7 @@ function Header() {
                             <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
                                 {/* trigger="click" để khi click nó sẽ hiện, nãy dùng để thay đổi thuộc tính của ấy thôi*/}
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -150,7 +150,7 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 src="https://lh3.googleusercontent.com/ogw/ADea4I6FoKMNXCY6JrXuLAhqVPlYoK2kBosFSYCdU_16tQ=s32-c-mo"
                                 alt="Pham Bang"
